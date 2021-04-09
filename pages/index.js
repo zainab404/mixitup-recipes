@@ -1,17 +1,17 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import {getRecipieData} from '../lib/recipies';
+import {getRecipeData} from '../lib/recipes';
 
 export async function getStaticProps() {
-  const allRecipiesData = getRecipieData()
+  const allRecipesData = getRecipeData()
   return {
     props: {
-      allRecipiesData
+      allRecipesData
     }
   }
 }
 
-export default function Home({allRecipiesData}) {
+export default function Home({allRecipesData}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -26,9 +26,9 @@ export default function Home({allRecipiesData}) {
       </main>
 
       <section>
-        <h1>Recipies</h1>
+        <h1>Recipes</h1>
         <ul>
-          {allRecipiesData.map(({id, title}) => (
+          {allRecipesData.map(({id, title}) => (
             <li key={id}>
               {title}
               <br/>

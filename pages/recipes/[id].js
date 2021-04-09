@@ -1,15 +1,15 @@
-import { getAllRecipieIds } from "../../lib/recipies"
+import { getAllRecipeIds } from "../../lib/recipes"
 
 export async function getStaticPaths() {
-  console.log(getAllRecipieIds())
-  const paths = getAllRecipieIds()
+  console.log(getAllRecipeIds())
+  const paths = getAllRecipeIds()
   return {
     paths,
     fallback: false
   }
 }
 
-export default function Recipie() {
+export default function Recipe() {
   return <div>Hello World</div>
 }
 
@@ -17,16 +17,16 @@ export default function Recipie() {
 
 
 
-// import { getAllRecipieIds, getRecipieData } from "../../lib/recipies"
+// import { getAllRecipieIds, getRecipieData } from "../../lib/recipes"
 
 // // export async function getStaticProps({params}) {
 // //   console.log("===============")
-// //   const recipieData = getRecipieData(params.id)
+// //   const recipeData = getRecipieData(params.id)
 // //   console.log("**************")
 // //   console.log(params.id)
 // //   return {
 // //     props: {
-// //       recipieData
+// //       recipeData
 // //     }
 // //   }
 // // }
@@ -39,8 +39,8 @@ export default function Recipie() {
 //   }
 // }
 
-// export default function Recipie({recipieData}) {
+// export default function Recipie({recipeData}) {
 //   return (
-//     <h1>{recipieData.title}</h1>
+//     <h1>{recipeData.title}</h1>
 //   )
 // }
